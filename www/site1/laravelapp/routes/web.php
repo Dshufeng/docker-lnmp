@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::group(['middleware' => 'my'], function () {
+    Route::get('/admin/index', function () {
+        return view('welcome');
+    });
 });
-Route::get('/hi', function () {
-    return 123;
-});
+
+Route::get('/login/index', 'LoginController@index');
+Route::post('/login/index', 'LoginController@login');
+Route::get('/login/logout', 'IndexController@logout');
