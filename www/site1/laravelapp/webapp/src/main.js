@@ -9,12 +9,16 @@ import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css';
 import Vuex from 'vuex';
 import store from './vuex/store';
-
+import moment from 'moment/moment';
 
 Vue.use(Mint)
 Vue.use(Vuex)
 Vue.config.productionTip = false;
 
+Vue.filter('moment', function (value, formatString) {
+  formatString = formatString || 'YYYY-MM-DD';
+  return moment(value).format(formatString); // value可以是普通日期 20170723
+});
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -1,7 +1,7 @@
 <template>
     <div id="site">
         <div class="header">
-            <mt-header title="优品商城" fixed>
+            <mt-header title="商城" fixed>
                 <mt-button icon="more" slot="right"></mt-button>
             </mt-header>
         </div>
@@ -21,33 +21,28 @@
                 </mt-tab-container-item>
             </mt-tab-container>
         </div>
-
+        <v-footer></v-footer>
     </div>
 </template>
-
 <script>
     import cate from './Cate';
     import home from './Home';
     import car from './Car';
     import person from './Person';
-
+    import footer from './Footer'
     export default {
         name: 'Home',
         components:{
             "v-home":home,
             "v-cate":cate,
             "v-car":car,
-            "v-person":person
+            "v-person":person,
+            "v-footer":footer
         },
         data() {
             return {
-                swiper: [
-                    {url: 'http://demos.sucaihuo.com/modals/30/3043/demo/uploads/banner1.jpg'},
-                    {url: 'http://demos.sucaihuo.com/modals/30/3043/demo/uploads/banner1.jpg'},
-                    {url: 'http://demos.sucaihuo.com/modals/30/3043/demo/uploads/banner1.jpg'},
-                ],
                 swipeable:true,
-                active:'home'
+                active:this.$store.state.active
             }
         },
         computed:{

@@ -1,7 +1,7 @@
 <template>
     <div class="footer">
         <mt-tabbar v-model="selected">
-            <mt-tab-item :id="v.id" v-for='(v,k) in footer' :key='k'>
+            <mt-tab-item :id="v.id" v-for='(v,k) in footer' :key='k' >
                 <img slot="icon" :src="['http://demos.sucaihuo.com/modals/30/3043/demo/images/footer00' +(k+1)+ '.png']">
                 {{v.name}}
             </mt-tab-item>
@@ -20,12 +20,12 @@
                     {name: '购物车',id:'car',icon:'icon-cart'},
                     {name: '我的',id:'person',icon:'icon-account'}
                 ],
-                selected:'home'
+                selected:this.$store.state.active
             }
         },
         watch:{
             selected:function(val,oldval){
-                this.$store.state.active =  this.selected;
+                this.$store.state.active = this.selected;
             }
         },
         methods:{

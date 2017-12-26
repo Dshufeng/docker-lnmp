@@ -1,17 +1,15 @@
 <template>
     <div id="app">
         <router-view></router-view>
-        <v-footer></v-footer>
     </div>
 </template>
 
 <script>
-    import footer from './components/Footer'
     import rem from './rem/rem.js'
     export default {
         name: 'app',
         components:{
-            "v-footer":footer
+
         }
     }
 </script>
