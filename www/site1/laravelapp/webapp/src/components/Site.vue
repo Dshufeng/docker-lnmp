@@ -1,7 +1,10 @@
 <template>
     <div id="site">
         <div class="header">
-            <mt-header title="商城" fixed>
+            <mt-header title="GO商城" fixed>
+                <router-link to="/" slot="left">
+                    <div class="search">搜一下,你试试</div>
+                </router-link>
                 <mt-button icon="more" slot="right"></mt-button>
             </mt-header>
         </div>
@@ -42,7 +45,8 @@
         data() {
             return {
                 swipeable:true,
-                active:this.$store.state.active
+                active:this.$store.state.active,
+                value:''
             }
         },
         computed:{
@@ -62,21 +66,38 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
     .content{
         padding-top: 1.2rem;
     }
     .swiper {
         height: 4.5rem;
         margin-top: 2px;
-
     }
-
     .mint-header {
-        background-color: red;
+        background-color: #FC605A;
         height: 1.2rem;
+        padding: 0 0.3rem;
     }
     .content{
         /*background: #fff;*/
         height: 100%;
+    }
+    .search{
+        height: 0.6rem;
+        border-radius: 0.4rem;
+        padding: 0.1rem 0;
+        text-align: center;
+        border: 0;
+        background: #ffffff;
+        width: 6rem;
+        vertical-align: middle;
+        color: #c8c8c8;
+        line-height: 0.6rem;
     }
 </style>

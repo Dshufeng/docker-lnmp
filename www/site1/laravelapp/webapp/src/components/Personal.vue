@@ -10,13 +10,13 @@
         </mt-cell>
         <mt-cell
                 title="姓名"
-                to="//github.com"
+                to=""
                 is-link
                 value="陌上">
         </mt-cell>
         <mt-cell
                 title="性别"
-                to="//github.com"
+                to=""
                 is-link
                 value="男">
         </mt-cell>
@@ -26,34 +26,40 @@
                 is-link
                 :value="pickerVisible | moment">
         </mt-cell>
-        <div>
-            <mt-datetime-picker
-                    ref="picker"
-                    v-model="pickerVisible"
-                    type="date"
-                    :startDate="startDate"
-                    :endDate="endDate"
-                    year-format="{value} 年"
-                    month-format="{value} 月"
-                    date-format="{value} 日">
-            </mt-datetime-picker>
-        </div>
+        <mt-datetime-picker
+                ref="picker"
+                v-model="pickerVisible"
+                type="date"
+                :startDate="startDate"
+                :endDate="endDate"
+                year-format="{value} 年"
+                month-format="{value} 月"
+                date-format="{value} 日"
+                @confirm="handleChange">
+        </mt-datetime-picker>
     </div>
 </template>
 
 <script>
+    import { Toast } from 'mint-ui';
     export default {
         name: 'Personal',
         data () {
             return {
-                pickerVisible:'1989-1-1',
-                startDate: new Date('1989-1-1'),
-                endDate: new Date()
+                startDate: new Date("January 12,1999 22:19:35"),
+                endDate: new Date(),
+                pickerVisible:new Date("January 12,2006 22:19:35")
             }
         },
         methods:{
             selectBirth:function () {
                 this.$refs.picker.open();
+            },
+            handleChange:function (value) {
+                Toast({
+                    message: '已选择 ' + value.toString(),
+                    position: 'bottom'
+                });
             }
         }
     }

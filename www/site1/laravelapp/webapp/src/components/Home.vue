@@ -8,16 +8,16 @@
             </mt-swipe>
         </div>
         <div class="home-nav ui-box">
-            <router-link to="/">
+            <router-link :to="{path:'detail'}">
                 <img src="http://demos.sucaihuo.com/modals/30/3043/demo/img/homenav1.png" alt="">
             </router-link>
-            <router-link to="/">
+            <router-link :to="{path:'detail'}">
                 <img src="http://demos.sucaihuo.com/modals/30/3043/demo/img/homenav2.png" alt="">
             </router-link>
-            <router-link to="/">
+            <router-link :to="{path:'detail'}">
                 <img src="http://demos.sucaihuo.com/modals/30/3043/demo/img/homenav3.png" alt="">
             </router-link>
-            <router-link to="/">
+            <router-link :to="{path:'detail'}">
                 <img src="http://demos.sucaihuo.com/modals/30/3043/demo/img/homenav4.png" alt="">
             </router-link>
         </div>
