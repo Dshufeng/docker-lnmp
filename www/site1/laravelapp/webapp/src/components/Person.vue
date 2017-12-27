@@ -10,24 +10,24 @@
             <div class="all-order">
                 <span>我的订单</span>
                 <span>
-                    <img src="http://demos.sucaihuo.com/modals/30/3043/demo/images/right.png" alt="">
+                    <img src="static/img/car/right.png" alt="">
                 </span>
             </div>
             <div class="myorder-li">
                 <div>
-                    <img src="http://demos.sucaihuo.com/modals/30/3043/demo/images/order-icon01.png" alt="">
+                    <img src="static/img/car/order-icon01.png" alt="">
                     <p>待付款</p>
                 </div>
                 <div>
-                    <img src="http://demos.sucaihuo.com/modals/30/3043/demo/images/order-icon02.png" alt="">
+                    <img src="static/img/car/order-icon02.png" alt="">
                     <p>待发货</p>
                 </div>
                 <div>
-                    <img src="http://demos.sucaihuo.com/modals/30/3043/demo/images/order-icon03.png" alt="">
+                    <img src="static/img/car/order-icon03.png" alt="">
                     <p>待评价</p>
                 </div>
                 <div>
-                    <img src="http://demos.sucaihuo.com/modals/30/3043/demo/images/order-icon04.png" alt="">
+                    <img src="static/img/car/order-icon04.png" alt="">
                     <p>退换货</p>
                 </div>
             </div>

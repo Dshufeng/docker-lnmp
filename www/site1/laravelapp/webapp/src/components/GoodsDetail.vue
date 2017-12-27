@@ -6,7 +6,7 @@
         <div class="pics">
             <mt-swipe :auto="4000">
                 <mt-swipe-item v-for="(v,k) in 3" :key="k">
-                    <img :src="['http://demos.sucaihuo.com/modals/30/3043/demo/images/detail-ban0'+ (k+1) +'.png']"
+                    <img :src="['static/img/detail/detail-ban0'+ (k+1) +'.png']"
                          alt="" width="100%">
                 </mt-swipe-item>
             </mt-swipe>
@@ -15,7 +15,7 @@
             <div class="m1">
                 <div>2015冬季新款韩版加厚中长款小鹿毛呢大衣</div>
                 <div>
-                    <img src="http://demos.sucaihuo.com/modals/30/3043/demo/images/detail-heart-hei.png" alt=""
+                    <img src="static/img/detail/detail-heart-hei.png" alt=""
                          width="30%">
                     <p>收藏</p>
                 </div>
@@ -52,7 +52,7 @@
                 <!-- tab-container -->
                 <mt-tab-container v-model="selected">
                     <mt-tab-container-item id="1">
-                        <img src="http://demos.sucaihuo.com/modals/30/3043/demo/images/detail-ban01.png" alt="" width="100%">
+                        <img src="static/img/detail/detail-ban01.png" alt="" width="100%">
                     </mt-tab-container-item>
                     <mt-tab-container-item id="2">
                         <mt-cell v-for="n in 4" :title="'评价 ' + n" :key="n"/>
@@ -223,7 +223,7 @@
     }
     .type ul .chose-active{
         border: solid 1px rgba(0,0,0,0);
-        background-image: url(http://demos.sucaihuo.com/modals/30/3043/demo/images/detail-icon03.png);
+        background-image: url(/static/img/detail/detail-icon03.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }

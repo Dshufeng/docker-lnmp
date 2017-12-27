@@ -25,7 +25,7 @@
                                 <span @click="num(index,'add')" class="bt">+</span>
                             </dd>
                             <dd class="del" @click="del(index)">
-                                <img src="http://demos.sucaihuo.com/modals/30/3043/demo/images/shopcar-icon01.png" alt="">
+                                <img src="static/img/car/shopcar-icon01.png" alt="">
                             </dd>
                         </dl>
                     </div>
@@ -65,21 +65,21 @@
                         'title': '只要998,马上带回家',
                         price: 550,
                         num: 11,
-                        img: 'http://demos.sucaihuo.com/modals/30/3043/demo/images/shopcar-ph01.png'
+                        img: 'static/img/car/shopcar-ph01.png'
                     },
                     {
                         id: 2,
                         'title': '只要666,马上带回家',
                         price: 990,
                         num: 1,
-                        img: 'http://demos.sucaihuo.com/modals/30/3043/demo/images/shopcar-ph01.png'
+                        img: 'static/img/car/shopcar-ph01.png'
                     },
                     {
                         id: 3,
                         'title': '只要888,马上带回家',
                         price: 110,
                         num: 4,
-                        img: 'http://demos.sucaihuo.com/modals/30/3043/demo/images/shopcar-ph01.png'
+                        img: 'static/img/car/shopcar-ph01.png'
                     }
                 ],
                 del_check: []
@@ -205,7 +205,7 @@
     .car-goods .add .bt {
         padding: 2% 10%;
         position: relative;
-        height: 0.55rem;
+        height: 0.7rem;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border: 1px solid #cccccc;
@@ -215,7 +215,7 @@
 
     .car-goods .price input {
         width: 1rem;
-        height: 0.62rem;
+        height: 0.69rem;
         font-size: 15px;
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
@@ -285,5 +285,11 @@
         width: 100%;
         text-align: center;
         font-size: 0.6rem;
+    }
+    .add{
+        height: 100%;
+    }
+    .del{
+        margin-top: 0.2rem;
     }
 </style>

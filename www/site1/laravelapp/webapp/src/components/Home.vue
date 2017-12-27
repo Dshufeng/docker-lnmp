@@ -9,51 +9,45 @@
         </div>
         <div class="home-nav ui-box">
             <router-link :to="{path:'detail'}">
-                <img src="http://demos.sucaihuo.com/modals/30/3043/demo/img/homenav1.png" alt="">
+                <img src="static/img/home/homenav1.png" alt="">
             </router-link>
             <router-link :to="{path:'detail'}">
-                <img src="http://demos.sucaihuo.com/modals/30/3043/demo/img/homenav2.png" alt="">
+                <img src="static/img/home/homenav2.png" alt="">
             </router-link>
             <router-link :to="{path:'detail'}">
-                <img src="http://demos.sucaihuo.com/modals/30/3043/demo/img/homenav3.png" alt="">
+                <img src="static/img/home/homenav3.png" alt="">
             </router-link>
             <router-link :to="{path:'detail'}">
-                <img src="http://demos.sucaihuo.com/modals/30/3043/demo/img/homenav4.png" alt="">
+                <img src="static/img/home/homenav4.png" alt="">
             </router-link>
         </div>
         <div class="home-qnav ui-box">
             <router-link to="/">
-                <img src="http://demos.sucaihuo.com/modals/30/3043/demo/img/qnav1.png" alt="">
+                <img src="static/img/home/qnav1.png" alt="">
                 <span class="name">我的店铺</span>
             </router-link>
             <router-link to="/">
-                <img src="http://demos.sucaihuo.com/modals/30/3043/demo/img/qnav2.png" alt="">
-                <span class="name">我的店铺</span>
+                <img src="static/img/home/qnav2.png" alt="">
+                <span class="name">招商加盟</span>
             </router-link>
             <router-link to="/">
-                <img src="http://demos.sucaihuo.com/modals/30/3043/demo/img/qnav3.png" alt="">
-                <span class="name">我的店铺</span>
+                <img src="static/img/home/qnav3.png" alt="">
+                <span class="name">我的喜欢</span>
             </router-link>
             <router-link to="/">
-                <img src="http://demos.sucaihuo.com/modals/30/3043/demo/img/qnav4.png" alt="">
-                <span class="name">我的店铺</span>
+                <img src="static/img/home/qnav4.png" alt="">
+                <span class="name">猜你喜欢</span>
             </router-link>
         </div>
         <div class="home-newgoods ui-box">
-            <img class="home-imgtit" src="http://demos.sucaihuo.com/modals/30/3043/demo/img/hometit1.jpg" alt="">
+            <img class="home-imgtit" src="static/img/home/hometit1.jpg" alt="">
             <div class="list-type1 plist-puzzle">
                 <a href="" class="left-box">
-                    <img src="http://demos.sucaihuo.com/modals/30/3043/demo/uploads/t1.jpg" alt="">
+                    <img src="static/img/home/t1.jpg" alt="">
                 </a>
                 <div class="s ui-flex-vt">
-                    <a href="" class="box">
-                        <img src="http://demos.sucaihuo.com/modals/30/3043/demo/uploads/t2.jpg" alt="">
-                    </a>
-                    <a href="" class="box">
-                        <img src="http://demos.sucaihuo.com/modals/30/3043/demo/uploads/t2.jpg" alt="">
-                    </a>
-                    <a href="" class="box">
-                        <img src="http://demos.sucaihuo.com/modals/30/3043/demo/uploads/t2.jpg" alt="">
+                    <a href="" class="box" v-for="n in 3">
+                        <img src="static/img/home//t2.jpg" alt="">
                     </a>
                 </div>
             </div>
@@ -67,9 +61,9 @@
         data() {
             return {
                 swiper: [
-                    {url: 'http://demos.sucaihuo.com/modals/30/3043/demo/uploads/banner1.jpg'},
-                    {url: 'http://demos.sucaihuo.com/modals/30/3043/demo/uploads/banner1.jpg'},
-                    {url: 'http://demos.sucaihuo.com/modals/30/3043/demo/uploads/banner1.jpg'},
+                    {url: 'static/img/home/banner1.jpg'},
+                    {url: 'static/img/home/banner1.jpg'},
+                    {url: 'static/img/home/banner1.jpg'},
                 ]
             }
         },

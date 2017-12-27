@@ -4,7 +4,7 @@
             <div class="" v-for="(v,k) in cate" :key="k" @click="selMenu(v.name)">
                 <mt-cell :title="v.name" :class="{'isactive' : v.name == itemNmae}">
                     <img slot="icon"
-                         :src="['http://demos.sucaihuo.com/modals/30/3043/demo/images/classify0'+ (k+1) +'.png']"
+                         :src="['static/img/cate/classify0'+ (k+1) +'.png']"
                          width="24" height="24">
                 </mt-cell>
             </div>
@@ -13,7 +13,7 @@
             <div class="cate-row" v-for="(k,v) in 5">
                 <span class="clear">{{itemNmae}}-{{k}}</span>
                 <div class="row" v-for="r in 9">
-                    <img src="http://demos.sucaihuo.com/modals/30/3043/demo/images/classify-ph03.png" alt="">
+                    <img src="static/img/cate/classify-ph03.png" alt="">
                 </div>
             </div>
         </div>

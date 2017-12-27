@@ -1,7 +1,7 @@
 <template>
     <div class="search">
         <header>
-            <div class="back">
+            <div class="back" @click="back">
                 <div class="mint-button mint-button--normal">
                     <span class="mint-button-icon">
                         <i class="mintui mintui-back"></i>
@@ -9,27 +9,16 @@
                 </div>
             </div>
             <div class="search-bar">
-                <input type="text" name="search">
+                <input type="text" name="search" v-model="searchContent">
             </div>
-            <div class="go-search">
+            <div class="go-search" @click="search">
                 <mt-button type="default">搜索</mt-button>
             </div>
         </header>
         <div class="hot">
             <h3>热门搜索</h3>
             <div>
-                <mt-badge type="primary"  size="large">外套</mt-badge>
-                <mt-badge type="primary"  size="large">连衣裙</mt-badge>
-                <mt-badge type="primary"  size="large">运动鞋</mt-badge>
-                <mt-badge type="primary"  size="large">夹克</mt-badge>
-                <mt-badge type="primary"  size="large">睡衣</mt-badge>
-                <mt-badge type="primary"  size="large">内衣</mt-badge>
-                <mt-badge type="primary"  size="large">内衣</mt-badge>
-                <mt-badge type="primary"  size="large">内衣</mt-badge>
-                <mt-badge type="primary"  size="large">内衣</mt-badge>
-                <mt-badge type="primary"  size="large">内衣</mt-badge>
-                <mt-badge type="primary"  size="large">内衣</mt-badge>
-                <mt-badge type="primary"  size="large">内衣</mt-badge>
+                <mt-badge :type="hotTags.type | random"  size="large" v-for="(tag,k) in hotTags.tags" :key="k">{{tag.name}}</mt-badge>
             </div>
         </div>
     </div>
@@ -37,20 +26,49 @@
 
 <script type="text/ecmascript-6">
     import { Badge } from 'mint-ui';
+    import { Toast } from 'mint-ui';
     export default {
         name: 'Search',
         data () {
             return {
-
+                hotTags:{
+                    tags:[
+                        {name:'外套'},
+                        {name:'连衣裙'},
+                        {name:'运动鞋'},
+                        {name:'夹克'},
+                        {name:'睡衣'},
+                        {name:'内衣'},
+                        {name:'外套'},
+                        {name:'毛衣'},
+                        {name:'牛仔裤'},
+                        {name:'羽绒服'},
+                        {name:'拖鞋'},
+                        {name:'外套'},
+                        {name:'衬衫'}
+                    ],
+                    type:['primary','error','success','warning']
+                },
+                searchContent:''
             }
         },
         computed: {
 
         },
         methods: {
-
+            back:function () {
+                this.$router.back();
+            },
+            search:function () {
+                if(!this.searchContent){
+                    Toast('请输入搜索内容:)');
+                }
+            }
         },
         filters:{
+            random:function (value) {
+                return value[Math.floor(Math.random()*(value.length))];
+            }
         }
     }
 </script>
@@ -107,10 +125,13 @@
         padding: 0.2rem;
     }
     .hot h3{
-        color: inherit;
-        font-size: 15px;
+        font-size: 1.35em;
+        color: #666;
+        font-weight: normal;
+        margin-bottom: 2%;
+        margin-left: 0.1rem;
     }
     .hot span{
-        margin-top: 0.2rem;
+        margin: 0.1rem;
     }
 </style>
